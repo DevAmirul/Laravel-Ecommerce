@@ -2,7 +2,9 @@
 Product Details
 @endpush
 @push('css')
-<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/flexslider.css') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/flexslider.min.css"
+    integrity="sha512-c7jR/kCnu09ZrAKsWXsI/x9HCO9kkpHw4Ftqhofqs+I2hNxalK5RGwo/IAhW3iqCHIw55wBSSCFlm8JP0sw2Zw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 @endpush
 <main id="main" class="main-site">
     <div class="container">
@@ -163,5 +165,7 @@ Product Details
     <!--end container-->
 </main>
 @push('script')
-<script src="{{ asset('assets/js/jquery.flexslider.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/jquery.flexslider-min.js"
+    integrity="sha512-BmoWLYENsSaAfQfHszJM7cLiy9Ml4I0n1YtBQKfx8PaYpZ3SoTXfj3YiDNn0GAdveOCNbK8WqQQYaSb0CMjTHQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 @endpush

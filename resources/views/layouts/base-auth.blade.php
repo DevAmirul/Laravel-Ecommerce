@@ -23,7 +23,7 @@
     <link id="pagestyle" href="{{ asset('admin/assets/css/material-dashboard.css?v=3.0.4') }}" rel="stylesheet" />
 </head>
 
-<body class="g-sidenav-show  bg-gray-200">
+<body class="g-sidenav-show bg-gray-200">
 
 
     @yield('sign-up')

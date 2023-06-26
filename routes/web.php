@@ -34,6 +34,20 @@ use Illuminate\Support\Facades\Route;
 //     return view( 'admin.dashboard' );
 // } )->middleware( 'adminAuth' )->name( 'admin.dashboard' );
 
+
+Route::get('/', Home::class)->name('/');
+Route::get('shop', Shop::class)->name('shop');
+Route::get('product/{slug}', ProductDetails::class)->name('product.details');
+Route::get('cart', Cart::class)->name('cart');
+Route::get('wishlist', Wishlist::class)->name('wishlist');
+Route::get('category/{slug}', ProductCategory::class)->name('category');
+Route::get('search', ProductSearch::class)->name('search');
+
+Route::get('thankyou', Thankyou::class)->name('Thankyou');
+Route::get('contact-us', ContactUs::class)->name('contactUs');
+Route::get('nothing', Nothing::class)->name('password');
+
+
 require __DIR__ . '/userAuth.php';
 
 Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
@@ -54,17 +68,6 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::get('settings', SiteSettings::class)->name('settings');
 });
 
-Route::get('/', Home::class)->name('/');
-Route::get('shop', Shop::class)->name('shop');
-Route::get('product/{slug}', ProductDetails::class)->name('product.details');
-Route::get('cart', Cart::class)->name('cart');
-Route::get('wishlist', Wishlist::class)->name('wishlist');
-Route::get('category/{slug}', ProductCategory::class)->name('category');
-Route::get('search', ProductSearch::class)->name('search');
-
-Route::get('thankyou', Thankyou::class)->name('Thankyou');
-Route::get('contact-us', ContactUs::class)->name('contactUs');
-Route::get('nothing', Nothing::class)->name('password');
 
 // Route::get( 'about-Us', AboutUs::class )->name( 'aboutUs' );
 // Route::get( 'terms-conditions', TermsConditions::class )->name( 'conditions' );
