@@ -26,13 +26,6 @@ use App\Http\Livewire\Shop;
 use App\Http\Livewire\Wishlist;
 use Illuminate\Support\Facades\Route;
 
-// Route::get( '/dashboard', function () {
-//     return view( 'dashboard' );
-// } )->middleware( ['auth', 'verified'] )->name( 'dashboard' );
-
-// Route::get( '/admin/dashboard', function () {
-//     return view( 'admin.dashboard' );
-// } )->middleware( 'adminAuth' )->name( 'admin.dashboard' );
 
 
 Route::get('/', Home::class)->name('/');
@@ -69,7 +62,3 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
 });
 
 
-// Route::get( 'about-Us', AboutUs::class )->name( 'aboutUs' );
-// Route::get( 'terms-conditions', TermsConditions::class )->name( 'conditions' );
-// Route::get( 'return-policy', ReturnPolicy::class )->name( 'returnPolicy' );
-// Route::get( 'privacy-policy', PrivacyPolicy::class )->name( 'privacyPolicy' );

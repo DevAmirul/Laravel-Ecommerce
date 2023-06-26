@@ -2,10 +2,12 @@
     "name": "laravel/laravel",
     "type": "project",
     "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
     "license": "MIT",
-    "require":
-    {
+    "require": {
         "php": "^8.0.2",
         "bumbummen99/shoppingcart": "^4.2",
         "guzzlehttp/guzzle": "^7.2",
@@ -14,28 +16,22 @@
         "laravel/tinker": "^2.7",
         "livewire/livewire": "^2.11"
     },
-    "require-dev":
-    {
+    "require-dev": {
         "laravel/breeze": "^1.18"
     },
-    "autoload":
-    {
-        "psr-4":
-        {
+    "autoload": {
+        "psr-4": {
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
         }
     },
-    "autoload-dev":
-    {
-        "psr-4":
-        {
+    "autoload-dev": {
+        "psr-4": {
             "Tests\\": "tests/"
         }
     },
-    "scripts":
-    {
+    "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
@@ -50,20 +46,16 @@
             "@php artisan key:generate --ansi"
         ]
     },
-    "extra":
-    {
-        "laravel":
-        {
+    "extra": {
+        "laravel": {
             "dont-discover": []
         }
     },
-    "config":
-    {
+    "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
         "sort-packages": true,
-        "allow-plugins":
-        {
+        "allow-plugins": {
             "pestphp/pest-plugin": true
         }
     },

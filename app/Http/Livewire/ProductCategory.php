@@ -24,7 +24,8 @@ class ProductCategory extends Component {
 
     protected $listeners = ['sliderPriceEmit'];
 
-    public function sliderPriceEmit( $arg ) {
+    public function sliderPriceEmit($arg)
+    {
         $this->minPrice = $arg[0];
         $this->maxPrice = $arg[1];
     }
