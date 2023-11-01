@@ -48,7 +48,4 @@ trait CartTraits {
         return Cart::instance( 'cart' );
     }
 
-
-
-
 }

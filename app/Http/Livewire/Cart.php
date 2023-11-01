@@ -147,6 +147,12 @@ class Cart extends Component {
         }
 
         $this->calculateDiscount();
+
+        // foreach ($this->cartContent() as $value) {
+        //     dump($value->model->image);
+        // }
+        // dd($this->cartContent());
+
         return view('livewire.cart', [
             'cartContents' => $this->cartContent(),
             'shippingCost' => $shippingCost,

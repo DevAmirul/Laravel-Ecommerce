@@ -1,15 +1,13 @@
 <?php
 
-namespace Database\Seeders;
-
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-use App\Models\Admin;
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\Sale;
+use App\Models\Setting;
 use App\Models\User;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder {
     /**
@@ -19,14 +17,16 @@ class DatabaseSeeder extends Seeder {
      */
     public function run() {
 
-        // Category::factory(6)->create();
-        Product::factory(15)->create();
+        Category::factory(5)->create();
+        Product::factory(20)->create();
+        Sale::factory(1)->create();
+        Setting::factory(1)->create();
 
-        // User::create( [
-        //     "name"       => 'User',
-        //     'email'      => 'user@gmail.com',
-        //     'password'   => Hash::make( 12345678 ),
-        // ] );
+        User::create([
+            "name"     => 'Admin',
+            'email'    => 'admin@mail.com',
+            'password' => Hash::make(12345678),
+        ]);
 
     }
 }

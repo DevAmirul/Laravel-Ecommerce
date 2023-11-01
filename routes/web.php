@@ -30,7 +30,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', Home::class)->name('/');
 Route::get('shop', Shop::class)->name('shop');
-Route::get('product/{slug}', ProductDetails::class)->name('product.details');
+Route::get('product/{id}', ProductDetails::class)->name('product.details');
 Route::get('cart', Cart::class)->name('cart');
 Route::get('wishlist', Wishlist::class)->name('wishlist');
 Route::get('category/{slug}', ProductCategory::class)->name('category');
@@ -41,7 +41,7 @@ Route::get('contact-us', ContactUs::class)->name('contactUs');
 Route::get('nothing', Nothing::class)->name('password');
 
 
-require __DIR__ . '/userAuth.php';
+require __DIR__ . '/auth.php';
 
 Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::get('dashboard', Dashboard::class)->name('dashboard');
@@ -60,5 +60,3 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::get('contacts', Contact::class)->name('contacts');
     Route::get('settings', SiteSettings::class)->name('settings');
 });
-
-

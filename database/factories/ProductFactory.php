@@ -23,6 +23,7 @@ class ProductFactory extends Factory
             'short_description' => fake()->text(200),
             'description' => fake()->text(500),
             'regular_price' => fake()->numberBetween(10,500),
+            'sale_price' => fake()->numberBetween(10,500),
             'SKU' => 'DIGI' . fake()->unique()->numberBetween(10,500),
             'stock_status' => 'instock',
             'quantity'  => fake()->numberBetween(100,200),
